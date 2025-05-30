@@ -14,7 +14,7 @@ const navItems: NavItem[] = [
   { id: 'skills', label: 'Skills' },
   { id: 'education', label: 'Education' },
   { id: 'certifications', label: 'Certifications' },
-  { id: 'contact', label: 'Contact' },
+ 
 ];
 
 const Navbar = () => {

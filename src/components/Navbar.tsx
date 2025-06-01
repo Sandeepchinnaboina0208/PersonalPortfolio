@@ -62,7 +62,7 @@ const Navbar = () => {
                 e.preventDefault();
                 scrollToSection(item.id);
               }}
-              className={`font-medium hover:text-green-600 transition ${
+              className={`font-medium hover:text-blue-600 transition ${
                 theme === 'dark' ? 'text-white' : 'text-black'
               }`}
             >
@@ -128,8 +128,8 @@ const Navbar = () => {
               }}
               className={`block font-medium transition ${
                 theme === 'dark'
-                  ? 'text-white hover:text-green-400'
-                  : 'text-black hover:text-green-600'
+                  ? 'text-white hover:text-blue-400'
+                  : 'text-black hover:text-blue-600'
               }`}
             >
               {item.label}

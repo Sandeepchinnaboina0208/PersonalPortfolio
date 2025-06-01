@@ -17,11 +17,9 @@ const About = () => {
           <div className="w-24 h-1 bg-primary-500 rounded mb-8"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
-            <h3 className="text-2xl font-bold mb-4">
-       
-            </h3>
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-12 items-center">
+          <div>
+            <h3 className="text-2xl font-bold mb-4"></h3>
             <p className="mb-6 text-gray-600 dark:text-gray-300">
               I'm a driven and enthusiastic full-stack developer with expertise in building dynamic and user-friendly web applications. With proficiency in technologies like React, Django, I love transforming complex ideas into seamless digital experiences.
             </p>
@@ -29,9 +27,7 @@ const About = () => {
               I enjoy exploring emerging technologies,and contributing to open-source projects. I'm passionate about creating impactful solutions that make a difference in the tech community.
             </p>
             <p className="mb-8 text-gray-600 dark:text-gray-300">
-              When I'm not coding, you can find me exploring new hiking trails, 
-              experimenting with photography, or diving into the latest tech books 
-              and tutorials to stay on top of industry trends.
+              I thrive in collaborative environments and enjoy working with cross-functional teams to deliver high-quality software. My strong problem-solving skills and attention to detail allow me to build scalable, maintainable systems that meet both technical and business goals.
             </p>
 
             <div className="flex flex-wrap gap-6 mb-8">
@@ -61,17 +57,6 @@ const About = () => {
               <FileText size={18} className="mr-2" />
               Download Resume
             </a>
-          </div>
-
-          <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative w-full max-w-md">
-              <div className="absolute -inset-4 bg-primary-500 rounded-lg transform rotate-3"></div>
-              <img 
-                src="https://images.pexels.com/photos/3771790/pexels-photo-3771790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                alt="John working" 
-                className="relative rounded-lg w-full h-auto shadow-lg"
-              />
-            </div>
           </div>
         </div>
       </div>

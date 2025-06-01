@@ -54,6 +54,7 @@ const Skills = () => {
                 <h3 className="text-lg font-semibold">{skill.name}</h3>
                 <span className="text-sm font-medium text-primary-500">{skill.level}%</span>
               </div>
+              
               <div className={`w-full h-2 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden`}>
                 <div 
                   className="h-full bg-primary-500 rounded-full transition-all duration-1000 ease-out"

@@ -50,7 +50,7 @@ const About = () => {
             </div>
 
             <a 
-              href="/resume.pdf" 
+              href="https://drive.google.com/uc?export=download&id=1aMoYCy_ZBuMNfjKjSqmAXRhk4-cZCNF9" 
               className="inline-flex items-center btn-primary"
               download
             >

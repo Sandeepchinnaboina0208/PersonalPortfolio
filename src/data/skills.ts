@@ -6,10 +6,10 @@ export interface Skill {
 }
 
 export interface SkillCategory {
+  ProgrammingLanguages: Skill[];
   frontend: Skill[];
   backend: Skill[];
   tools: Skill[];
-  ProgrammingLanguages: Skill[];
 }
 
 export const skills: SkillCategory = {

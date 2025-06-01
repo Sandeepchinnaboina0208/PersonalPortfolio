@@ -249,7 +249,8 @@ const Contact = () => {
                         ? 'border-gray-600 bg-gray-700 text-white' 
                         : 'border-gray-300 bg-white text-gray-800'
                   } focus:outline-none focus:ring-2 focus:ring-primary-500`}
-                  placeholder="John Doe"
+                  placeholder="Enter your name"
+
                 />
                 {formErrors.name && (
                   <p className="mt-1 text-sm text-red-500 dark:text-red-400">{formErrors.name}</p>
@@ -273,7 +274,7 @@ const Contact = () => {
                         ? 'border-gray-600 bg-gray-700 text-white' 
                         : 'border-gray-300 bg-white text-gray-800'
                   } focus:outline-none focus:ring-2 focus:ring-primary-500`}
-                  placeholder="john@example.com"
+                  placeholder="Enter your email address"
                 />
                 {formErrors.email && (
                   <p className="mt-1 text-sm text-red-500 dark:text-red-400">{formErrors.email}</p>
@@ -321,7 +322,7 @@ const Contact = () => {
                         ? 'border-gray-600 bg-gray-700 text-white' 
                         : 'border-gray-300 bg-white text-gray-800'
                   } focus:outline-none focus:ring-2 focus:ring-primary-500`}
-                  placeholder="Hello, I'm interested in working with you on..."
+                  placeholder="Enter your message here"
                 ></textarea>
                 {formErrors.message && (
                   <p className="mt-1 text-sm text-red-500 dark:text-red-400">{formErrors.message}</p>

@@ -15,6 +15,16 @@ export const categories = ['web',];
 export const projects: ProjectType[] = [
   {
     id: 1,
+    title: 'Sccop-n-Sip',
+    description: 'Developed a responsive business website for Nazeer Cool Drinks to showcase their products and boost online presence.',
+    image: 'https://ik.imagekit.io/avpe74sdx/sccop_logo.png?updatedAt=1748786836139',
+    technologies: ['React.js', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS','EmailJS'],
+    categories: ['web'],
+    liveUrl: 'https://nazeercooldrinks.vercel.app/',
+    repoUrl: 'https://github.com/Sandeepchinnaboina0208/Scoop-n-Sip',
+  },
+  {
+    id: 4,
     title: 'Astrology Prediction System',
     description: 'A web application that provides astrology predictions based on user input.',
     image: 'https://ik.imagekit.io/avpe74sdx/astrologo.png?updatedAt=1748787038724',
@@ -54,15 +64,6 @@ export const projects: ProjectType[] = [
     repoUrl: 'https://github.com/Sandeepchinnaboina0208/Task-Management-Application',
   },
  
-  {
-    id: 4,
-    title: 'Sccop-n-Sip',
-    description: 'Developed a responsive business website for Nazeer Cool Drinks to showcase their products and boost online presence.',
-    image: 'https://ik.imagekit.io/avpe74sdx/sccop_logo.png?updatedAt=1748786836139',
-    technologies: ['React.js', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS','EmailJS'],
-    categories: ['web'],
-    liveUrl: 'https://nazeercooldrinks.vercel.app/',
-    repoUrl: 'https://github.com/Sandeepchinnaboina0208/Scoop-n-Sip',
-  },
+  
  
 ];

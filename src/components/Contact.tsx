@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import emailjs from '@emailjs/browser';
 
 interface FormData {
   name: string;
@@ -59,39 +60,55 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // Clear error when typing
     if (formErrors[name as keyof FormErrors]) {
       setFormErrors(prev => ({ ...prev, [name]: undefined }));
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (validateForm()) {
       setIsSubmitting(true);
       
-      // Simulate form submission
-      setTimeout(() => {
-        setIsSubmitting(false);
+      try {
+        const result = await emailjs.send(
+          'service_w1xfh0l', // Replace with your EmailJS service ID
+          'template_rshtdkp', // Replace with your EmailJS template ID
+          {
+            from_name: formData.name,
+            from_email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+          },
+          'K2V3kyekcGdU81F5x' // Replace with your EmailJS public key
+        );
+
+        if (result.status === 200) {
+          setSubmitMessage({
+            type: 'success',
+            text: 'Your message has been sent! I will get back to you soon.',
+          });
+          
+          setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+          });
+        }
+      } catch (error) {
         setSubmitMessage({
-          type: 'success',
-          text: 'Your message has been sent! I will get back to you soon.',
+          type: 'error',
+          text: 'Failed to send message. Please try again later.',
         });
+      } finally {
+        setIsSubmitting(false);
         
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-        });
-        
-        // Clear success message after 5 seconds
         setTimeout(() => {
           setSubmitMessage(null);
         }, 5000);
-      }, 1500);
+      }
     }
   };
 
@@ -127,7 +144,7 @@ const Contact = () => {
                 <div>
                   <h4 className="text-lg font-medium mb-1">Email</h4>
                   <a 
-                    href="mailto:john@example.com" 
+                    href="mailto:sandeepchinnaboina286@gmail.com" 
                     className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
                   >
                     sandeepchinnaboina286@gmail.com
@@ -144,7 +161,7 @@ const Contact = () => {
                 <div>
                   <h4 className="text-lg font-medium mb-1">Phone</h4>
                   <a 
-                    href="tel:+11234567890" 
+                    href="tel:+919392852574" 
                     className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
                   >
                     +91 9392852574
@@ -196,7 +213,6 @@ const Contact = () => {
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                 </a>
-              
               </div>
             </div>
           </div>
